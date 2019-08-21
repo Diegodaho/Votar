@@ -1,12 +1,53 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
+    
+     <f:metadata>
+         <f:viewAction action="#{seguFormulario.metodoMostrar}" />
+    </f:metadata>
     <h:body>
-        Hello from Facelets
+        <h:form id="form"> 
+            <h:panelGrid columns="3">
+                <h:outputLabel value ="Nombre del Usuario"></h:outputLabel>
+                <h:outputLabel value="#{seguFormulario.primerFormulario.nombre}"></h:outputLabel>
+			<br />
+			<br />
+
+                        <h:outputLabel value="Salario Por Dia"></h:outputLabel>
+                        <h:outputLabel value="#{seguFormulario.primerFormulario.primersalario}"></h:outputLabel>
+			<br />
+			<br />
+			<h:outputLabel value="Dias trabajados"></h:outputLabel>
+                        <h:outputLabel value="#{seguFormulario.primerFormulario.diastrabajados}"></h:outputLabel>
+			<br />
+			<br />
+                        
+                       <h:outputLabel value="Idimos dominados"></h:outputLabel>
+                       <h:outputLabel value="#{seguFormulario.primerFormulario.lista}"></h:outputLabel>
+                        
+                        
+                        <br />
+			<br />
+                        
+                        <h:outputLabel value="Total de pago"></h:outputLabel>
+                        <h:outputLabel value="#{seguFormulario.total}"></h:outputLabel>
+                        
+                        
+                        
+                         </h:panelGrid>
+            
+            
+            
+            
+            
+            
+        </h:form>
+                        
     </h:body>
 </html>
 

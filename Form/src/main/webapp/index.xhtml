@@ -9,29 +9,29 @@
     <h:body>
         <h:form id="form">
             <h:panelGrid columns="3">
-			<h:outputLabel for="mname">Nombre:</h:outputLabel>
-			<h:inputText id="mname"></h:inputText>
+                <h:outputLabel value ="Nombre"></h:outputLabel>
+                        <h:inputText value="#{priMulario.nombre}"></h:inputText>
 			<br />
 			<br />
 
-			<h:outputLabel for="model">Salario Por Dia:</h:outputLabel>
-			<h:inputText id="model"></h:inputText>
+                        <h:outputLabel value="Salario Por Dia"></h:outputLabel>
+                        <h:inputText value="#{priMulario.primersalario}"></h:inputText>
 			<br />
 			<br />
-			<h:outputLabel for="color">Dias Trabajados:</h:outputLabel>
-			<h:inputText id="color"></h:inputText>
+			<h:outputLabel value="diastrabajados"></h:outputLabel>
+                        <h:inputText value="#{priMulario.diastrabajados}"></h:inputText>
 			<br />
 			<br />
                         
-                         <h:selectManyCheckbox value = "#{userData.data}">
-                            <f:selectItem itemValue = "INGLES" itemLabel = "INGLES" />
-                            <f:selectItem itemValue = "ESPAÑOL" itemLabel = "ESPAÑOL" />
-                            <f:selectItem itemValue = "FRANCES" itemLabel = "FRANCES" />
-                            <f:selectItem itemValue = "MANDARIN" itemLabel = "MANDARIN" />
+                        <h:selectManyCheckbox value = "#{priMulario.lista}">
+                            <f:selectItem itemValue = "ingles" itemLabel = "INGLES" />
+                            <f:selectItem itemValue = "español" itemLabel = "ESPAÑOL" />
+                            <f:selectItem itemValue = "frances" itemLabel = "FRANCES" />
+                            <f:selectItem itemValue = "mandarin" itemLabel = "MANDARIN" />
                            
                          </h:selectManyCheckbox>
                         
-                        <h:commandButton value="submit" type="submit" action="#{user.goLoginPage}" />
+                         <h:commandButton value="Cargar" action="newxhtm?faces-redirect=true"></h:commandButton>
 	    </h:panelGrid>
             
             
